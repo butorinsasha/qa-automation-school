@@ -3,7 +3,7 @@ package lec01oopbasics
 class Payment {
     val id: String = "299792"
     val sum: Float = 123.45f
-    val user: String = "Sasha"
+    val user: String = "Butorin Sasha"
     val shopId: String = "1337"
 
     fun preparePayment() {
