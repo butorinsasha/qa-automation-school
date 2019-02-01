@@ -1,10 +1,10 @@
 package lec01oopbasics
 
 class Payment {
-    val id: String = ""
-    val sum: Float = 0.0f
-    val user: String = ""
-    val shopId: String = ""
+    val id: String = "299792"
+    val sum: Float = 123.45f
+    val user: String = "Sasha"
+    val shopId: String = "1337"
 
     fun preparePayment() {
         println("Подготовка пк выполнению плтежа")
