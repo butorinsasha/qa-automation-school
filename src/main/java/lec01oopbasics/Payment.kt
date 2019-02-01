@@ -1,10 +1,16 @@
 package lec01oopbasics
 
-class Payment {
-    val id: String = "00004"
-    val sum: Float = 123.45f
-    val user: String = "Aleksandr Butorin"
-    val shopId: String = "1337"
+import java.util.Random
+// import kotlin.random.Random
+
+// Primary constructor
+class Payment(val sum: Float, val user: String, val shopId: String = "338") {
+    var id = "" // mutable variable
+
+//  initializer block
+    init {
+        id = Random().nextInt(sum.toInt() + 10).toString()
+    }
 
     fun preparePayment() {
         println("Подготовка пк выполнению плтежа")
