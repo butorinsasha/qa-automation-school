@@ -1,7 +1,7 @@
 package lec01oopbasics
 
 class Payment {
-    val id: String = "00002"
+    val id: String = "00004"
     val sum: Float = 123.45f
     val user: String = "Aleksandr Butorin"
     val shopId: String = "1337"
