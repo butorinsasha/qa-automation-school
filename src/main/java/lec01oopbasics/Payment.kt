@@ -11,6 +11,6 @@ class Payment {
     }
 
     fun doPayment() {
-        println("Подготовка к выполнению платежа")
+        println("Проводим платеж")
     }
 }
