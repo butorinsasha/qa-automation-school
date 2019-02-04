@@ -1,25 +1,27 @@
 package lec01oopbasics
 
 fun main(args : Array<String>) {
-    val payment = Payment(18.30f, "Vasya", "67192")
-    println("payment.id = " + payment.id)
-    println("payment.sum = " + payment.sum)
-    println("payment.user = " + payment.user)
-    println("payment.shoId = " + payment.shopId)
 
-    payment.doPayment()
+    // Cannot create an instance of abstract class
+//    val payment = Payment(18.30f, "Vasya", "67192")
+//    println("payment.id = " + payment.id)
+//    println("payment.sum = " + payment.sum)
+//    println("payment.user = " + payment.user)
+//    println("payment.shoId = " + payment.shopId)
+//
+//    payment.doPayment()
 
     println()
 
-    val payment1 = Payment(18.30f, "Kolya")
-    println("payment1.id = " + payment1.id)
-    println("payment1.sum = " + payment1.sum)
-    println("payment1.user = " + payment1.user)
-    println("payment1.shoId = " + payment1.shopId)
+//    val payment1 = Payment(18.30f, "Kolya")
+//    println("payment1.id = " + payment1.id)
+//    println("payment1.sum = " + payment1.sum)
+//    println("payment1.user = " + payment1.user)
+//    println("payment1.shoId = " + payment1.shopId)
 
     Payment.getAvailableShops()
 //    payment.getAvailableShops() // Unresolved reference: getAvailableShops
-    payment.doPayment()
+//    payment.doPayment()
 
     println()
 
@@ -28,5 +30,15 @@ fun main(args : Array<String>) {
     anyCardPayment.preparePayment()
     anyCardPayment.doPayment()
     anyCardPayment.cardAuthorize()
+
+    println()
+
+    val anyCard: Payment = AnyCardPayment(666.66f, "Borya", "666")
+    anyCard.makePayment(anyCard)
+
+    val wallet: Payment = WalletPayment(777.77f, "Klava", "777")
+    wallet.makePayment(wallet)
+
+
 
 }
