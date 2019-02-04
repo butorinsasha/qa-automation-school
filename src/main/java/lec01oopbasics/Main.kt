@@ -31,13 +31,19 @@ fun main(args : Array<String>) {
     anyCardPayment.doPayment()
     anyCardPayment.cardAuthorize()
 
+    val walletPayment = WalletPayment(123.34f, "Ira", "87665")
+
     println()
 
     val anyCard: Payment = AnyCardPayment(666.66f, "Borya", "666")
     anyCard.makePayment(anyCard)
+    anyCard.makeRefund(anyCardPayment);
+
+    println()
 
     val wallet: Payment = WalletPayment(777.77f, "Klava", "777")
     wallet.makePayment(wallet)
+    anyCard.makeRefund(walletPayment)
 
 
 

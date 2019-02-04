@@ -1,6 +1,9 @@
 package lec01oopbasics
 
-class AnyCardPayment (sum: Float, user: String, shopId: String = "666") : Payment(sum, user, shopId) {
+class AnyCardPayment (sum: Float, user: String, shopId: String = "666") : Refundable, Payment(sum, user, shopId) {
+    override fun refund(sum: Float) {
+        println("Делаем возврат на банковскую карту: $sum")
+    }
 
     val card = Card()
 
@@ -9,6 +12,6 @@ class AnyCardPayment (sum: Float, user: String, shopId: String = "666") : Paymen
     }
 
     fun cardAuthorize() {
-        println("Авторицация карты:" + card.getCardNumber())
+        println("Авторицация карты: " + card.getCardNumber())
     }
 }

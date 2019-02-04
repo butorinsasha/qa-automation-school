@@ -28,4 +28,8 @@ abstract class Payment(val sum: Float, val user: String, val shopId: String = "3
         payment.preparePayment()
         doPayment()
     }
+
+    fun makeRefund(refundable: Refundable) {
+        refundable.refund(234.22f)
+    }
 }
