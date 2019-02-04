@@ -4,7 +4,7 @@ import java.util.Random
 // import kotlin.random.Random
 
 // Primary constructor
-class Payment(val sum: Float, val user: String, val shopId: String = "338") {
+open class Payment(val sum: Float, val user: String, val shopId: String = "338") {
     var id = "" // mutable variable
 
 //  initializer block
@@ -16,7 +16,7 @@ class Payment(val sum: Float, val user: String, val shopId: String = "338") {
         println("Подготовка пк выполнению плтежа")
     }
 
-    fun doPayment() {
+    open fun doPayment() {
         println("Проводим платеж")
     }
 

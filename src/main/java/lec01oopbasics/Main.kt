@@ -21,10 +21,7 @@ fun main(args : Array<String>) {
 //    payment.getAvailableShops() // Unresolved reference: getAvailableShops
     payment.doPayment()
 
-//    val payment2 = Payment()
-//    println("payment2.id = " + payment2.id)
-//    println("payment2.sum = " + payment2.sum)
-//    println("payment2.user = " + payment2.user)
-//    println("payment2.shoId = " + payment2.shopId)
+    val anyCardPayment = AnyCardPayment(123.45f, "Ilona") // Default value for shopId is not send when extending classes
+    val anyCardPayment1 = AnyCardPayment(205.01f, "Kostya", "666")
 
 }
