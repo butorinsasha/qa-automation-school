@@ -28,7 +28,7 @@ fun main(args : Array<String>) {
     val anyCardPayment = AnyCardPayment(123.45f, "Ilona") // Default value for shopId is not send when extending classes
     val anyCardPayment1 = AnyCardPayment(205.01f, "Kostya", "666")
     anyCardPayment.preparePayment()
-    anyCardPayment.doPayment()
+//    anyCardPayment.doPayment()
     anyCardPayment.cardAuthorize()
 
     val walletPayment = WalletPayment(123.34f, "Ira", "87665")
@@ -45,4 +45,7 @@ fun main(args : Array<String>) {
     wallet.makePayment(wallet)
     anyCard.makeRefund(walletPayment)
 
+    println()
+
+//    anyCard.saveToDB() //Cannot access 'saveToDB': it is private in 'Payment'
 }

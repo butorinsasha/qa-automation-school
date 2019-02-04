@@ -16,10 +16,14 @@ abstract class Payment(val sum: Float, val user: String, val shopId: String = "3
         println("Подготовка к выполнению платежа")
     }
 
-    abstract fun doPayment()
+    protected abstract fun doPayment()
 
     companion object {
         fun getAvailableShops() = listOf("65192", "338")
+    }
+
+    private fun saveToDB() {
+        println("Сохраняем данные в БД")
     }
 
     fun addTenToId() = id + 10
@@ -27,6 +31,7 @@ abstract class Payment(val sum: Float, val user: String, val shopId: String = "3
     fun makePayment(payment: Payment) {
         payment.preparePayment()
         doPayment()
+        saveToDB()
     }
 
     fun makeRefund(refundable: Refundable) {
