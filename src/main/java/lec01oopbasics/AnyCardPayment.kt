@@ -9,5 +9,4 @@ class AnyCardPayment (sum: Float, user: String, shopId: String = "666") : Paymen
     fun cardAuthorize() {
         println("Авторицация карты")
     }
-
 }

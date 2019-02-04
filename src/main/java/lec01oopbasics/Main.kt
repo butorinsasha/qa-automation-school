@@ -21,7 +21,11 @@ fun main(args : Array<String>) {
 //    payment.getAvailableShops() // Unresolved reference: getAvailableShops
     payment.doPayment()
 
+    println()
+
     val anyCardPayment = AnyCardPayment(123.45f, "Ilona") // Default value for shopId is not send when extending classes
     val anyCardPayment1 = AnyCardPayment(205.01f, "Kostya", "666")
+    anyCardPayment.preparePayment()
+    anyCardPayment.doPayment()
 
 }

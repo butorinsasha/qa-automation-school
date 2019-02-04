@@ -13,7 +13,7 @@ open class Payment(val sum: Float, val user: String, val shopId: String = "338")
     }
 
     fun preparePayment() {
-        println("Подготовка пк выполнению плтежа")
+        println("Подготовка к выполнению платежа")
     }
 
     open fun doPayment() {
@@ -23,4 +23,6 @@ open class Payment(val sum: Float, val user: String, val shopId: String = "338")
     companion object {
         fun getAvailableShops() = listOf("65192", "338")
     }
+
+    fun addTenToId() = id + 10
 }
