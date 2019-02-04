@@ -45,6 +45,4 @@ fun main(args : Array<String>) {
     wallet.makePayment(wallet)
     anyCard.makeRefund(walletPayment)
 
-
-
 }
