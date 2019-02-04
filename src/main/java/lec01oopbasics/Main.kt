@@ -27,5 +27,6 @@ fun main(args : Array<String>) {
     val anyCardPayment1 = AnyCardPayment(205.01f, "Kostya", "666")
     anyCardPayment.preparePayment()
     anyCardPayment.doPayment()
+    anyCardPayment.cardAuthorize()
 
 }
