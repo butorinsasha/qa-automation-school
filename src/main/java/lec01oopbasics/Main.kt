@@ -17,6 +17,8 @@ fun main(args : Array<String>) {
     println("payment1.user = " + payment1.user)
     println("payment1.shoId = " + payment1.shopId)
 
+    Payment.getAvailableShops()
+//    payment.getAvailableShops() // Unresolved reference: getAvailableShops
     payment.doPayment()
 
 //    val payment2 = Payment()
@@ -25,5 +27,4 @@ fun main(args : Array<String>) {
 //    println("payment2.user = " + payment2.user)
 //    println("payment2.shoId = " + payment2.shopId)
 
-    payment.doPayment()
 }

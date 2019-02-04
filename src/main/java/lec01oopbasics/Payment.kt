@@ -19,4 +19,8 @@ class Payment(val sum: Float, val user: String, val shopId: String = "338") {
     fun doPayment() {
         println("Проводим платеж")
     }
+
+    companion object {
+        fun getAvailableShops() = listOf("65192", "338")
+    }
 }
