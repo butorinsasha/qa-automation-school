@@ -6,11 +6,23 @@ class KotlinColectionsTest {
 
     @Test
     fun mutableTest() {
-        val list = mutableListOf(1, 2, 3)
-        list.add(4)
-        list.remove(0)
-        list.set(1, 10)
+        val mutableList = mutableListOf(1, 2, 3)
+        mutableList.add(4)
+        mutableList.remove(0)
+        mutableList.set(1, 10)
 
-        println(list)
+        println(mutableList)
     }
+
+    @Test
+    fun immutableTest() {
+        val immmutableList = listOf(1, 2, 3)
+//        immmutableList.add(4) // Unresolved reference
+//        immmutableList.remove(0) // Unresolved reference
+//        immmutableList.set(1, 10) // Unresolved reference
+
+        println(immmutableList)
+    }
+
+
 }
