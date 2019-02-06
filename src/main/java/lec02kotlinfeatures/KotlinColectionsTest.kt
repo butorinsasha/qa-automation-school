@@ -38,11 +38,19 @@ class KotlinColectionsTest {
     fun mapTest() {
         val list = mutableListOf("бояться", "горя", "счастья", "не", "знать")
 //        List<String> listJava = new ArrayList<String>();
-
-        val newList = list.map{ it.plus(" + ")}
+        val newList = list.map { it.plus(" + ") }
 
         println(newList)
         printList(newList as MutableList<String>)
+    }
+
+
+    @Test
+    fun filterTest() {
+        val list = mutableListOf("бояться", "горя", "счастья", "не", "знать")
+
+        val newList = list.filter { it.contains('о') }
+        println(newList)
     }
 
 
