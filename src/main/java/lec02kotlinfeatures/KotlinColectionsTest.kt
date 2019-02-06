@@ -14,6 +14,9 @@ class KotlinColectionsTest {
         println(mutableList)
     }
 
+
+
+
     @Test
     fun immutableTest() {
         val immmutableList = listOf(1, 2, 3)
@@ -22,6 +25,24 @@ class KotlinColectionsTest {
 //        immmutableList.set(1, 10) // Unresolved reference
 
         println(immmutableList)
+    }
+
+
+
+
+    fun printList(list: MutableList<String>) {
+        for (item in list) print(item)
+    }
+
+    @Test
+    fun mapTest() {
+        val list = mutableListOf("бояться", "горя", "счастья", "не", "знать")
+//        List<String> listJava = new ArrayList<String>();
+
+        val newList = list.map{ it.plus(" + ")}
+
+        println(newList)
+        printList(newList as MutableList<String>)
     }
 
 
