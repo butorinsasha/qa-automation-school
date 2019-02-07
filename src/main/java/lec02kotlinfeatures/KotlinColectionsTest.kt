@@ -16,7 +16,6 @@ class KotlinColectionsTest {
 
 
 
-
     @Test
     fun immutableTest() {
         val immmutableList = listOf(1, 2, 3)
@@ -26,7 +25,6 @@ class KotlinColectionsTest {
 
         println(immmutableList)
     }
-
 
 
 
@@ -45,13 +43,27 @@ class KotlinColectionsTest {
     }
 
 
+
     @Test
     fun filterTest() {
         val list = mutableListOf("бояться", "горя", "счастья", "не", "знать")
 
-        val newList = list.filter { it.contains('о') }
+        val newList = list.filter { it.contains('о') } // русская 'о'
         println(newList)
     }
 
+
+
+    @Test
+    fun anyTest() {
+        val list = mutableListOf("бояться", "горя", "счастья", "не", "знать")
+
+        // why val ?
+        // val list = mutableListOf("раз", "два", "три")
+
+        val newList = list.any { it.contains('о') }
+
+        println(newList)
+    }
 
 }
