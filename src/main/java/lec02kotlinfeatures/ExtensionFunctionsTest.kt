@@ -1,6 +1,9 @@
 package lec02kotlinfeatures
 
 import org.junit.Test
+import java.time.Instant
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 class ExtensionFunctionsTest {
 
@@ -48,4 +51,15 @@ class ExtensionFunctionsTest {
 
         println(list)
     }
+
+//    fun Long.toReadableTime(): String =
+//            Instant.ofEpochMilli(this)
+//                    .atZone(zoneId)
+//                    .atLocal
+//                    .toLocalDateTime()
+//                    .format(DateTimeFormatter.ofPattern("HH:mm:ss"))
+//
+//    val now: Long = System.currentTimeMillis()
+//    log.info("Время ${now.toReadableTime()}")
+
 }
