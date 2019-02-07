@@ -66,4 +66,12 @@ class KotlinColectionsTest {
         println(newList)
     }
 
+    @Test
+    fun allTest() {
+        val list = mutableListOf("бояться", "горя", "счастья", "не", "знать")
+
+        val newList = list.all { it.contains('о') }
+
+        println(newList)
+    }
 }
