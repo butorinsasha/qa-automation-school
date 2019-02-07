@@ -1,5 +1,6 @@
 package lec02kotlinfeatures
 
+import org.junit.Assert
 import org.junit.Test
 
 class KotlinColectionsTest {
@@ -71,5 +72,26 @@ class KotlinColectionsTest {
         val newList = list.filter { it.contains('о') }.count()
 
         println(newList)
+    }
+
+    /**
+     * На вход метода типа Boolean подается 4 агрумента типа Boolean.Метод возвращает true в том и только том случае, когда два аргумента true
+     */
+
+     fun twoTruths(first: Boolean,
+                   second: Boolean,
+                   third: Boolean,
+                   fourth: Boolean): Boolean {
+        return listOf(first, second, third, fourth).filter { it }.count() == 2
+    }
+
+    @Test
+    fun twoTruthsTest() {
+        Assert.assertTrue(twoTruths(true, true, false, false))
+        Assert.assertTrue(twoTruths(true, false, true, false))
+        Assert.assertFalse(twoTruths(true, false, true, true ))
+        Assert.assertFalse(twoTruths(true, false, true, true ))
+        Assert.assertFalse(twoTruths(true, true, true, true))
+        Assert.assertFalse(twoTruths(false, false, false, false))
     }
 }
