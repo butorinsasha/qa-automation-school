@@ -14,8 +14,6 @@ class KotlinColectionsTest {
         println(mutableList)
     }
 
-
-
     @Test
     fun immutableTest() {
         val immmutableList = listOf(1, 2, 3)
@@ -26,10 +24,12 @@ class KotlinColectionsTest {
         println(immmutableList)
     }
 
-
-
-    fun printList(list: MutableList<String>) {
+    fun printList1(list: MutableList<String>) {
         for (item in list) print(item)
+    }
+
+    fun printList2 (list: MutableList<String>) {
+        for (i in 0..list.count()-1) print(list[i])
     }
 
     @Test
@@ -39,10 +39,10 @@ class KotlinColectionsTest {
         val newList = list.map { it.plus(" + ") }
 
         println(newList)
-        printList(newList as MutableList<String>)
+        printList1(newList as MutableList<String>)
+        println()
+        printList2(newList)
     }
-
-
 
     @Test
     fun filterTest() {
@@ -51,8 +51,6 @@ class KotlinColectionsTest {
         val newList = list.filter { it.contains('о') } // русская 'о'
         println(newList)
     }
-
-
 
     @Test
     fun anyTest() {
@@ -67,10 +65,10 @@ class KotlinColectionsTest {
     }
 
     @Test
-    fun allTest() {
+    fun countTest() {
         val list = mutableListOf("бояться", "горя", "счастья", "не", "знать")
 
-        val newList = list.all { it.contains('о') }
+        val newList = list.filter { it.contains('о') }.count()
 
         println(newList)
     }
