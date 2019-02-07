@@ -33,6 +33,10 @@ class KotlinColectionsTest {
         for (i in 0..list.count()-1) print(list[i])
     }
 
+    fun printList3 (list: MutableList<String>) {
+        for (i in 0 until list.count()) print(list[i])
+    }
+
     @Test
     fun mapTest() {
         val list = mutableListOf("бояться", "горя", "счастья", "не", "знать")
