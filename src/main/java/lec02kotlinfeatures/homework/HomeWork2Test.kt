@@ -65,4 +65,49 @@ class HomeWork2Test {
 
     }
 
+    @Test
+    fun regexFinderTest() {
+        val list1 = listOf( "Sasha",
+                            "Masha",
+                            "SashaMasha",
+                            "sa",
+                            "!@*s&$#a",
+                            "kassa")
+
+        val list2 = listOf( "nonono",
+                            "12345678",
+                            "What",
+                             "sad")
+
+        val list3 = listOf( "nonono",
+                            "12345678",
+                            "what",
+                            "sad",
+                            "kassa",
+                            "Sasha")
+        val list4 = listOf( "Kolya",
+                            "Andrey",
+                            "bar",
+                            "Sasha",
+                            "loop",
+                            "123456")
+
+        val actual1 = HomeWork2().regexFinder(list1, "^.*s.*a\$$")
+        val expected1 = 6
+
+        val actual2 = HomeWork2().regexFinder(list2, "^.*s.*a\$")
+        val expected2 = 0
+
+        val actual3 = HomeWork2().regexFinder(list3, "^.*s.*a\$")
+        val expected3 = 2
+
+        val actual4 = HomeWork2().regexFinder(list4)
+        val expected4 = 2
+
+        Assert.assertEquals(expected1, actual1)
+        Assert.assertEquals(expected2, actual2)
+        Assert.assertEquals(expected3, actual3)
+        Assert.assertEquals(expected4, actual4)
+    }
+
 }
