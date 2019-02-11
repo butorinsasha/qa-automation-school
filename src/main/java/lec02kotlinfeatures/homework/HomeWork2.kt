@@ -58,7 +58,7 @@ class HomeWork2 {
         val actuals = mutableListOf<Int>()
 
         for (i in ints) {
-//            actuals.add(i.numOfDigits1())
+//            actuals.add(x.numOfDigits1())
             actuals.add(i.numOfDigits2())
         }
 

@@ -8,7 +8,7 @@ internal object JavaComma {
         i = 0
         j = 10
         while (i < j) {
-            println("i and j: $i $j")
+            println("x and j: $i $j")
             i++
             j--
         }

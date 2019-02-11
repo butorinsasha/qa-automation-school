@@ -2,8 +2,8 @@ package lec02kotlinfeatures.homework;
 
 class JavaComma {
     public static void main(String args[]) {
-        int i, j;
-        for(i=0, j=10; i < j; i++, j--)
-            System.out.println("i and j: " + i + " " + j);
+        int k, l;
+        for(k=0, l=10; k < l; k++, l--)
+            System.out.println("x and j: " + k + " " + l);
     }
 }

@@ -110,4 +110,62 @@ class HomeWork2Test {
         Assert.assertEquals(expected4, actual4)
     }
 
+
+    @Test
+    fun homeWork2Task6MyClassTest() {
+
+        val myObj  = HomeWork2Task6MyClass(true)
+
+        // Set positive number to x and get it
+
+        myObj.x = Double.MAX_VALUE
+        println("PASSED: myObj.x = Double.MAX_VALUE =  ${myObj.x}")
+        Assert.assertEquals(Double.MAX_VALUE, myObj.x, 0.0)
+
+        myObj.x = 123.456
+        println("PASSED: myObj.x = ${myObj.x}")
+        Assert.assertEquals(123.456, myObj.x, 0.0)
+
+        myObj.x = Double.MIN_VALUE
+        println("PASSED: myObj.x = Double.MIN_VALUE = ${myObj.x}")
+        Assert.assertEquals(Double.MIN_VALUE, myObj.x, 0.0)
+
+        myObj.x = 0.0
+        try {
+            println(myObj.x)
+            Assert.fail("FAILED: No NotPositiveNumberException")
+        } catch (e: NotPositiveNumberException) {
+            println("PASSED: NotPositiveNumberException is caught. myObj.x = 0.0")
+
+        }
+
+        myObj.x = -123.456
+        try {
+            println(myObj.x)
+            Assert.fail("FAILED: No NotPositiveNumberException")
+        } catch (e: NotPositiveNumberException) {
+            println("PASSED: NotPositiveNumberException is caught. myObj.x = -123.456")
+        }
+        myObj.x = -Double.MIN_VALUE
+        try {
+            println(myObj.x)
+            Assert.fail("FAILED: No NotPositiveNumberException")
+        } catch (e: NotPositiveNumberException) {
+            println("PASSED: NotPositiveNumberException is caught. myObj.x = -Double.MIN_VALUE")
+
+        }
+
+        myObj.x = -Double.MAX_VALUE
+        try {
+            println(myObj.x)
+            Assert.fail("FAILED: No NotPositiveNumberException")
+        } catch (e: NotPositiveNumberException) {
+            println("PASSED: NotPositiveNumberException is caught. myObj.x = -Double.MIN_VALUE")
+        }
+
+        myObj.s = "<HTML><HeaD></hEAd><body></body></HTML>"
+        println(myObj.s)
+        Assert.assertEquals("lthtmlgtltheadgtlt/headgtltbodygtlt/bodygtlt/htmlgt", myObj.s)
+    }
+
 }
