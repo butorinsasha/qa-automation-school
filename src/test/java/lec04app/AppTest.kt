@@ -6,7 +6,7 @@ class AppTest {
 
     @Test
     fun payment() {
-        main(arrayOf("payment", "Вася", "123.45", "4454"))
+        main(arrayOf("payment", "Вася", "123.45", "4455"))
     }
 
     @Test
