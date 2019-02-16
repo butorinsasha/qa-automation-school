@@ -6,12 +6,12 @@ class AppTest {
 
     @Test
     fun payment() {
-        main(arrayOf("payment", "Вася", "123.45", "4455"))
+        main(arrayOf("payment", "Вася", "10.50", "4455"))
     }
 
     @Test
     fun deposit() {
-        main(arrayOf("deposit", "Вася", "123.45"))
+        main(arrayOf("deposit", "Вася", "20"))
     }
 
     @Test
@@ -21,6 +21,6 @@ class AppTest {
 
     @Test
     fun shopInfo() {
-        main(arrayOf("shop_info", "4454"))
+        main(arrayOf("shop_info", "4455"))
     }
 }
